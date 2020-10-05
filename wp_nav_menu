@@ -1,0 +1,8 @@
+// Displays a navigation menu.
+
+<?php wp_nav_menu(); ?> // Shows the first non-empty menu or wp_page_menu()
+
+<?php wp_nav_menu( array(
+    'theme_location' => is_user_logged_in() ? 'logged-in-menu' : 'logged-out-menu'
+) ); ?>                                               // This example would cause a menu to show for logged-in users and a different menu for users not logged-in.
+
