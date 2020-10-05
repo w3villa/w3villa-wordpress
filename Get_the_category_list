@@ -1,0 +1,14 @@
+// Retrieve category list for a post in either HTML list or custom format.
+
+<?php echo get_the_category_list(); ?> // By leaving the $separator value empty, it will generate an unordered list instead, complete with classes.
+
+Result of above statement :
+
+<ul class="post-categories">
+    <li>
+        <a href="http://w3villa.com/category/business" title="View all posts in Business" rel="category tag">Business</a>
+    </li>
+    <li>
+        <a href="http://w3villa.com/category/development" title="View all posts in Development" rel="category tag">Deveopment</a>
+    </li>
+</ul>
