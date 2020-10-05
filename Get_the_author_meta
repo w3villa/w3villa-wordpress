@@ -1,0 +1,24 @@
+// Retrieves the requested data of the author of the current post.
+
+// Get the author ID Outside loop:
+
+<?php global $post;
+$author_id = $post->post_author; ?>
+ 
+// Get the author ID inside a loop :
+
+<?php $author_id = get_the_author_meta( 'ID' ); ?>
+
+// below is a few examples of author value :
+
+// to get  nicename
+<?php get_the_author_meta( 'nicename', $author_id ); ?>
+ 
+// to get  email
+<?php get_the_author_meta( 'email', $author_id ); ?>
+ 
+// to get  url
+<?php get_the_author_meta( 'url', $author_id ); ?>
+ 
+// to get  status
+<?php get_the_author_meta( 'status', $author_id ); ?>
