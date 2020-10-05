@@ -1,0 +1,20 @@
+<?php
+/**
+ * Add custom taxonomy
+ */
+add_action('init', 'w3_villa_compilations');
+function w3_villa_compilations() {
+  register_taxonomy('compilations', 'tracks',
+    array(
+      'hierarchical' => true,
+      'labels' => array(
+        'name' => 'Compilations',
+        'add_new_item' => 'Add new compilation'
+      ),
+      'show_ui' => true,
+      'public' => true,
+      'query_var' => 'compilations'
+    )
+  );
+}
+?>

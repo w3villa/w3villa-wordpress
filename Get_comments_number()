@@ -1,0 +1,9 @@
+// Retrieves the amount of comments a post has.
+
+// Get current post Comments Number:
+
+<?php echo get_comments_number(); ?>
+
+// Get specific post Comments Number:
+
+<?php echo get_comments_number($post->ID); ?>

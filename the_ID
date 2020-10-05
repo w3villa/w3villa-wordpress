@@ -1,0 +1,3 @@
+// Display the ID of the current item in the WordPress Loop.
+
+<p>Post Number: <?php the_ID(); ?></p>
