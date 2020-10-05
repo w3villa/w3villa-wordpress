@@ -1,4 +1,4 @@
-Get User :
+Get User by :
 
 <?php $user = get_user_by( 'email', 'user@example.com' );
 echo 'User is ' . $user->first_name . ' ' . $user->last_name; ?> 
