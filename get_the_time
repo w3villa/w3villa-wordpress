@@ -1,0 +1,5 @@
+// Retrieve the time at which the post was written.
+
+<?php echo get_the_time(); ?> //default Usage
+
+<?php echo get_the_time( '', $post->ID ); ?> // Returns the time of the post with ID $post->ID in the WordPress default format.
