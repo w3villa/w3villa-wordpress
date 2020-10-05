@@ -1,0 +1,7 @@
+// Displays information about the current site.
+
+<?php bloginfo( 'url' ); ?> //Displays blog's url
+
+<?php bloginfo( 'name' ); ?> //Display your blog's title in a tag.
+
+<?php bloginfo( 'description' ); ?> //Displays the tagline of your blog as set in Settings > General

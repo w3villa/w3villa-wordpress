@@ -1,4 +1,3 @@
-
 <?php
 $current_user = wp_get_current_user();
 printf( __( 'Username: %s', 'textdomain' ), esc_html( $current_user->user_login ) ) . '<br />';

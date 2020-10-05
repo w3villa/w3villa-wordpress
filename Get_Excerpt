@@ -1,0 +1,7 @@
+To get excerpt of post -
+ <?php the_excerpt(); ?>
+
+Display Excerpt of small length -
+<?php $excerpt = the_excerpt(); 
+$excerpt = substr( $excerpt, 0, 260 ); // Only display first 260 characters of excerpt
+?>
