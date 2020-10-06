@@ -1,0 +1,14 @@
+// This is a conditional tag which checks whether the index page is displayed. The function returns true or false, it’s boolean.
+
+// is_home() doesn’t accept any parameters.
+
+Example:
+
+[html]
+<?php if (is_home()) {
+echo ‘This is the homepage of w3villa.’;
+}
+else {
+echo ‘This is not the homepage of w3villa.’;
+}
+[/html]
