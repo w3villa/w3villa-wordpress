@@ -1,0 +1,6 @@
+// Retrieve the tags for a post formatted as a string.
+
+<?php echo get_the_tag_list( sprintf( '<p>%s: ', __( 'Tags', 'textdomain' ) ), ', ', '</p>' ); ?> //This outputs the list of tags inside a paragraph, with tags separated by commas.
+
+Output -
+<p>Tags: <a href="tag1">Tag 1</a>, <a href="tag2">Tag 2</a>, ...</p>
