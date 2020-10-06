@@ -1,0 +1,12 @@
+// This function includes your header.php file into the template. The general usage is:
+
+<?php get_header( $name ); ?>
+
+/* $name is the name of your header file, in case you have several headers with different titles, for example – header-w3villa.php. 
+To call this header you need to write: */
+
+[html]
+<?php get_header( ‘w3villa’ ); ?>
+[/html]
+
+
