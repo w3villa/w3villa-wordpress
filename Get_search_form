@@ -1,0 +1,6 @@
+//Default Usage :
+
+<?php get_search_form($echo); ?>
+
+/* The parameter $echo for get_search_form() function is boolean and optional. By default it’s true, displaying the search form. 
+If it’s set to false, the function will return the searchform as a string instead of displaying it. */
