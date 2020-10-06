@@ -1,0 +1,16 @@
+// generates the title of the current page.
+// General usage of wp_title() function looks like this:
+
+<?php wp_title(); ?>
+
+// More Uses :
+
+<?php wp_title( $sep, $display, $seplocation ); ?>
+
+/* $sep (string) is the separator, usually separating site title and inner page title, be it a post, a page, a category or a custom post type. The default value is » (»)
+
+$display (boolean) defines whether you want to display the title as text (TRUE) or just retrieve its value (FALSE). The default value is TRUE.
+
+$seplocation defines whether the separator is used before (left) or after (right) the title. */
+
+
