@@ -1,0 +1,43 @@
+Adding JavaScript and Your First Ajax Call
+
+jQuery(document).ready( function(){         
+    jQuery('#content').on('click', 'a.rml_bttn', function(e) { 
+        e.preventDefault();
+        var rml_post_id = jQuery(this).data( 'id' );    
+        jQuery.ajax({
+            url : readmelater_ajax.ajax_url,
+            type : 'post',
+            data : {
+                action : 'read_me_later',
+                post_id : rml_post_id
+            },
+            success : function( response ) {
+                jQuery('.rml_contents').html(response);
+            }
+        });
+        jQuery(this).hide();            
+    });     
+});
+
+
+Ajax Action Hook
+// Setup Ajax action hook
+add_action( 'wp_ajax_read_me_later', array( $this, 'read_me_later' ) );
+function read_me_later() {
+    $rml_post_id = $_POST['post_id']; 
+    $echo = array();       
+    if(get_user_meta( wp_get_current_user()->ID, 'rml_post_ids', true ) !== null ) {
+        $value = get_user_meta( wp_get_current_user()->ID, 'rml_post_ids', true );
+    }
+
+    if( $value ) {
+        $echo = $value;
+        array_push( $echo, $rml_post_id );
+    }
+    else {
+        $echo = array( $rml_post_id );
+    }
+
+    update_user_meta( wp_get_current_user()->ID, 'rml_post_ids', $echo );
+    $ids = get_user_meta( wp_get_current_user()->ID, 'rml_post_ids', true );
+}

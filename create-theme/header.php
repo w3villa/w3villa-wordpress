@@ -1,3 +1,4 @@
+
 <html>
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
@@ -13,3 +14,4 @@
 <h1><?php bloginfo( 'name' ); ?></h1>
 </a>
 </header>
+
