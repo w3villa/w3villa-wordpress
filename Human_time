@@ -1,0 +1,11 @@
+// A feature to mimic twitter like time display. Instead of outputting the time in a basic format you can display it like this:
+
+Example - Kriesi posted 13 hours ago
+
+//Default Usage below :
+
+<?php human_time_diff( $from, $to ) ?>
+
+// To print an entry’s time (“2 days ago”):
+
+<?php echo esc_html( human_time_diff( get_the_time('U'), current_time('timestamp') ) ) . ' ago'; ?>
