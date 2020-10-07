@@ -9,6 +9,8 @@
  * Author URI: http://www.w3villa.com
  * @copyright 2020, W3villa Technologies, All rights reserved.
  */
+
+// Here we are going to append “Hello World!” text at the places where "simple_plugin" action hook is triggred.
  
 function w3villa_says_hello_world() {
 
@@ -18,4 +20,4 @@ function w3villa_says_hello_world() {
 
 add_filter( 'simple_plugin', 'w3villa_says_hello_world' ); //need an action "smple-plugin" for place where we want to hook into in order to display the "Hello World!" string
 
- 
+
