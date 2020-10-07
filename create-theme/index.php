@@ -1,20 +1,12 @@
-<?php get_header(); ?>
-<div id="w3villa_main" class="row">
-<div id="w3villa_content" class="col-lg-8 col-sm-8 col-md-8 col-xs-12">
-
-<div class="row">
-<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-<div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
-<h1><?php the_title(); ?></h1>
-<h4>Posted on <?php the_time('F jS, Y') ?></h4>
-<p><?php the_content(__('(more...)')); ?></p>
-</div>
-<?php endwhile; else: ?>
-<p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
-<?php endif; ?>
-</div>
+<?php
+get_header(); ?>
+<div id="contentArea">
+<div id="mainContent">
+<?php while ( have_posts() ) : the_post(); ?>
+<h2><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title() ?></a></h2>
+<?php the_content() ?>
+<?php endwhile; ?>
 </div>
 <?php get_sidebar(); ?>
 </div>
-
 <?php get_footer(); ?>
