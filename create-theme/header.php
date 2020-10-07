@@ -1,19 +1,15 @@
 <html>
 <head>
-<title>w3villa theme</title>
-<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri().'/js/jquery.js'; ?>">
-</script>
-<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri().'/js/jquery-ui.min.js'; ?>">
-</script>
-<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri().'/js/bootstrap.js'; ?>">
-</script>
-<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri().'/css/bootstrap.css'; ?>">
+<meta charset="<?php bloginfo( 'charset' ); ?>">
+<title><?php bloginfo('name'); ?><?php wp_title( '|', true, 'left' ); ?></title>
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
+<?php wp_head();  ?>	
 </head>
-
 <body>
-
-<div id="w3villa_header" class="custom_theme">
-<h1>HEADER</h1>
-</div>
-<div class="container">
+<div align="center">
+<div id="inner">
+<header>
+<a href="<?php echo home_url( '/' ); ?>" title="<?php echo bloginfo('name'); ?>" rel="home">
+<h1><?php bloginfo( 'name' ); ?></h1>
+</a>
+</header>
