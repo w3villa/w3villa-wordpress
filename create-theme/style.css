@@ -1,20 +1,40 @@
-body
-{
+/*
+Theme Name: Theme-by-W3villa
+Theme URI: http://localhost:85/wordpress/themes/Theme-by-W3villa
+Version: 1.0
+Author: W3villa
+Author URI: https://w3villa.com/
+Description: A Minimal WordPress Theme.
+Tags: minimal, simple, responsive, light-weight
+Text Domain: Theme-by-W3villa
+*/
+a {
+color: #A0A0A0;
+text-decoration: none;
+}
+#inner {
+width: 778px;
 text-align: left;
 }
-#w3villa_sidebar
-{
-border-left: 1px solid black;
+#contentArea {
+border-top: #CCCCCC 2px solid;
+overflow:hidden
 }
-#w3villa_footer
-{
-width: 100%;
-border-top: 1px #a2a2a2 solid;
-text-align: center;
+#mainContent {	
+float:left;
+width: 70%;
 }
-.title
-{
-font-size: 11pt;
-font-family: verdana;
-font-weight: bold;
+#sidebar {
+float: right;
+width: 28%;
+padding-left: 3px;
+padding-bottom:100%; 
+margin-bottom:-100%;
+background-color: #DDDDDD;	
+}
+#footer {
+clear:both;
+padding: 2px;
+color: #DDDDDD;
+background-color: #000000;	
 }
