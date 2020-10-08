@@ -1,0 +1,40 @@
+<?php
+/*
+Plugin Name: W3villa Custom Taxonomy Widget
+Plugin URI: https://w3villa.com
+Description: Sidebar widget to list Custom taxonomy
+Author: W3villa
+Author URI: https://w3villa.com 
+Version: 1.0.0
+*/
+
+class W3villa_Taxonomy_Widget extends WP_Widget {
+	function __construct() {
+		parent::__construct(
+		'Taxonomy_Widget',
+		'W3villa Taxonomy Widget', 
+		array( 'description' => 'Sidebar widget to list Custom taxonomy', ) 
+		);
+	}
+	
+	function widget( $args, $instance ) {
+		$title = apply_filters( 'widget_title', $instance['title'] );
+		echo $args['before_widget'];
+		echo $args['before_title'] . "Awards" . $args['after_title'];	
+		echo "<ul class='award-term category'>" . wp_list_categories(array(
+				'hide_empty'=>0,
+				'post_type'=>'post',
+				'orderby' => 'term_order',
+				'hierarchical' => 1,
+				'taxonomy' => 'awards',
+				'echo'=>0,
+				'title_li' => '')) . "</ul>";
+		echo $args['after_widget'];
+	}
+}
+
+function register_taxonomy_widget() {
+	register_widget( 'W3villa_Taxonomy_Widget' );
+}
+add_action( 'widgets_init', 'register_taxonomy_widget' );
+?>

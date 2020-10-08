@@ -1,0 +1,14 @@
+Installing WordPress is a very easy and simple process.
+
+<h2>Prerequisites:</h2>
+WordPress requires PHP and MySQL. So, before installing we need to ensure that we have PHP and MySQL in our local environment. 
+If there is no PHP, MySQL in your machine, install them using packages. XAMPP, LAMP Or WAMP is preferred to install PHP and Mysql easily.
+
+<h2>WordPress Installation Steps</h2>
+The following list includes the steps to be followed to install WordPress in a local environment.
+
+Download the latest version of the WordPress zip from its official website.
+Extract the zip file into the PHP root directory.
+Save wp-config-sample.php as wp-config.php to configure WordPress with your own settings.
+Open WordPress database by using PHPMyAdmin or any other database client you are using.
+Run wp-admin/install.php and enter all the mandatory information and submit the form. It will redirect us to log in.
