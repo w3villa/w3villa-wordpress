@@ -1,0 +1,22 @@
+<?php
+$args_intop = array(
+						'post_type' => 'post',
+						'posts_per_page' => 15,
+						'post_status'   => 'publish',
+						'date_query'    => array(
+							'column'  => 'post_date',
+							'after'   => '-1 days'
+						)
+					);
+
+				   
+             $articleQuery_intop = new WP_Query( $args_intop );
+			 $articleQuery_extop = new WP_Query( $args_extop );
+			 if ( $articleQuery_intop->have_posts() || $articleQuery_extop->have_posts() ) {
+                    while( $articleQuery_intop->have_posts() ): $articleQuery_intop->the_post();
+					$content_currnetpost .='<h3 style="font-size:22px; text-decoration:none; font-weight:600;"> <a href="'.get_the_permalink().'">'.get_the_title().'</a></h3>';
+					$content_currnetpost .='<p>'.substr(strip_tags(get_the_content()), 0,200).' ...</p>';
+					$content_currnetpost .='<a style="color:#1155cc; text-decoration:none;" href="'.get_the_permalink().'">Read More</a>';
+					endwhile;
+				}	
+         wp_reset_postdata();	 
