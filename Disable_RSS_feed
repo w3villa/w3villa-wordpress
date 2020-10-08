@@ -1,0 +1,18 @@
+You need to edit functions.php file from your WordPress theme. All you need to do is simple,
+
+* From your WordPress theme, download and open functions.php file in a text editor
+* Paste the below given code snippet in it and upload the file back.
+
+function wp_disable_feeds() {
+wp_die( __('No feeds available!') );
+}
+ 
+add_action('do_feed', 'wp_disable_feeds', 1);
+add_action('do_feed_rdf', 'wp_disable_feeds', 1);
+add_action('do_feed_rss', 'wp_disable_feeds', 1);
+add_action('do_feed_rss2', 'wp_disable_feeds', 1);
+add_action('do_feed_atom', 'wp_disable_feeds', 1);
+add_action('do_feed_rss2_comments', 'wp_disable_feeds', 1);
+add_action('do_feed_atom_comments', 'wp_disable_feeds', 1);
+
+NOTE - add_action method hooks a function to an action.
