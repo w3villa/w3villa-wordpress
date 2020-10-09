@@ -1,0 +1,7 @@
+//Default Usage to user logout
+
+<a href="<?php echo wp_logout_url(); ?>">Logout</a>
+
+//Below example shows how to logout and redirect to current page inside the loop
+
+<a href="<?php echo wp_logout_url( get_permalink() ); ?>">Logout</a>
